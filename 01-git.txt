@@ -33,3 +33,6 @@ $ git branch --> List Local Branches
 $ git branch -r --> List Remote Branches
 $ git branch -a --> List All (Local + Remote) Branches
 $ git branch --show-current --> Check Current Branch
+$ git branch <branch-name> --> creates branch
+$ git switch <branch-name> 
+$ git diff main feature --> shows diff b/w
