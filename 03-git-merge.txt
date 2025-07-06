@@ -1,0 +1,13 @@
+git merge – Combine branches by creating a new merge commit
+    git merge takes the contents of one branch and merges them into another branch (usually your current branch).
+    
+    It preserves the history of both branches.
+    
+    It creates a new merge commit if there are new commits on both branches.
+
+git rebase – Reapply commits on top of another branch
+    takes the commits from your current branch and re-applies them on top of another branch.
+
+    It rewrites commit history.
+
+    It creates new commits that look like your changes were made after the latest commit in the target branch.
