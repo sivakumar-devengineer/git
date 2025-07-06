@@ -22,3 +22,14 @@ $ git push -u origin master -->
     What -u (or --set-upstream) does:
     It links your local branch to the remote branch, so that in the future, you can simply use:
     $ git push 
+
+to chnage the origin url:
+-------------------------
+$ git remote set-url origin <new-repo-url>
+
+List  Branches
+-------------------
+$ git branch --> List Local Branches
+$ git branch -r --> List Remote Branches
+$ git branch -a --> List All (Local + Remote) Branches
+$ git branch --show-current --> Check Current Branch
