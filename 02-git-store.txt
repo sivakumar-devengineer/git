@@ -1,0 +1,51 @@
+ In Git, blob, tree, and snapshot are fundamental concepts that explain how Git stores data internally.
+ 1.Blob (Binary Large Object)
+ --------------------------
+    A blob in Git stores the contents of a file, but not its name or location in the directory structure.
+    Even if the filename changes, if the content is the same, Git uses the same blob.
+    Identified by a SHA-1 hash.
+    Example:
+        You create a file:
+        echo "Hello Git" > greeting.txt
+        $ git add greeting.txt
+        Git creates a blob object for "Hello Git" and assigns it a unique hash (like 2e65efe2...).
+
+        You can inspect it:
+        $ git ls-files --stage
+    The blob ID points to the content:
+        $ git cat-file -p 2e65efe2...
+            O/P: Hello Git
+    
+ 2. Tree
+ -----------
+ A tree is a snapshot of a folder — listing all its files (as blobs) and folders (as trees).
+    Example:
+    Say your project structure is:
+
+    project/
+    ├── index.html
+    └── css/
+        └── style.css
+
+        Git will create:
+        One blob for index.html
+        One tree for the css/ folder
+        One blob for style.css
+        One root tree for the project that links to:
+            The index.html blob
+            The css tree
+        Inspect with:
+            $ git ls-tree HEAD
+
+ 3. Snapshot
+ -------------
+ A snapshot is a commit in Git. Each commit stores:
+    Git does not store diffs like older version control systems. Instead, every commit is a full snapshot of the project at that point in time — but it reuses unchanged blobs and trees to save space.
+
+    Example:
+    $ git commit -m "Initial commit"
+    That commit:
+        Has a pointer to a tree (directory snapshot)
+        That tree links to blobs (file contents)
+        The commit is stored as a new object in Git
+
