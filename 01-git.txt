@@ -9,3 +9,16 @@ $ git status -->  Show the current state of the working directory and staging ar
 $ git add <file> --> 	Add file(s) to the staging area
 $ git add .	 --> Stage all modified files
 $ git commit -m "message"	-->  Commit staged changes with a message
+$ git log	--> Show commit history
+$ git remote -v	--> Show remote repositories
+$ git push	--> Push changes to a remote repository
+$ git pull	--> Fetch and merge changes from a remote repository
+$ git fetch	--> Download changes from remote but don’t merge yet
+
+$ git push -u origin master --> 
+    This command uploads your local commits from the master branch to the remote repository
+    -u: Sets the upstream tracking relationship
+
+    What -u (or --set-upstream) does:
+    It links your local branch to the remote branch, so that in the future, you can simply use:
+    $ git push 
