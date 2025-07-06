@@ -1,0 +1,11 @@
+$ git init
+    The command git init is used to initialize a new Git repository.
+    It creates a new subdirectory named .git in your project folder.
+    This .git folder contains all the metadata and objects that Git uses to track the history of your project.
+commands:
+===========
+$ git status -->  Show the current state of the working directory and staging area
+
+$ git add <file> --> 	Add file(s) to the staging area
+$ git add .	 --> Stage all modified files
+$ git commit -m "message"	-->  Commit staged changes with a message
